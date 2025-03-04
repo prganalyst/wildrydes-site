@@ -75,7 +75,7 @@ var WildRydes = window.WildRydes || {};
             Username: toUsername(email),
             Password: password
         });
-        alert(authenticationDetails);
+        alert(authenticationDetails.AuthenticationDetails);
         var cognitoUser = createCognitoUser(email);
         alert(cognitoUser);
         cognitoUser.authenticateUser(authenticationDetails, {
