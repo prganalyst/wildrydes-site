@@ -75,8 +75,9 @@ var WildRydes = window.WildRydes || {};
             Username: toUsername(email),
             Password: password
         });
-
+        alert(authenticationDetails);
         var cognitoUser = createCognitoUser(email);
+        alert(cognitoUser);
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: onSuccess,
             onFailure: onFailure
@@ -117,7 +118,6 @@ var WildRydes = window.WildRydes || {};
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
         var password = $('#passwordInputSignin').val();
-        alert(password);
         event.preventDefault();
         signin(email, password,
             function signinSuccess() {
